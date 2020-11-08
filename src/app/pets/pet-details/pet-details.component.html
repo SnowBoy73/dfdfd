@@ -1,0 +1,10 @@
+<button  routerLink="/pets">Back</button>
+<h1>Pet Details</h1>
+<div *ngIf="pet">
+  <h2>{{pet.petId}}</h2>
+  <h3>{{pet.name}} the {{pet.type.name}}</h3>
+</div>
+
+<div *ngIf="!pet">
+  <h2>No pet with that ID found</h2>
+</div>

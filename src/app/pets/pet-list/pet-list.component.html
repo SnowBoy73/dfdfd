@@ -1,0 +1,10 @@
+<button routerLink="/pet-add">Add Pet</button>
+<ul *ngIf="pets">
+  <li *ngFor="let pet of pets">
+    <a routerLink="/pets/{{pet.petId}}">
+      {{pet.name}} the {{pet.type.name}} is {{pet.colour}} and costs ${{pet.price}}      </a>
+    <button routerLink="/pet-update/{{pet.petId}}">Update</button>
+    <button (click)="delete(pet.petId)">Delete</button>
+  </li>
+</ul>
+<h4 *ngIf="!pets ">Ruminating....</h4>
